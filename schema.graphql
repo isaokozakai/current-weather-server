@@ -1,6 +1,7 @@
 type User {
   id: ID
   name: String
+  token: String
 }
 
 type City {
@@ -19,7 +20,11 @@ type Weather {
 }
 
 type Query {
-  user(name: String, password: String): User
-  citySearch(search: String): [City]
-  weatherSearch(lat: Float, lon: Float): Weather
+  login(name: String, password: String): User
+  cities(search: String): [City]
+  weather(lat: Float, lon: Float): Weather
+}
+
+type Mutation {
+  register(name: String, password: String): User
 }

@@ -1,7 +1,10 @@
 import { ApolloServer } from 'apollo-server';
 import { loadSchemaSync } from '@graphql-tools/load';
-const { GraphQLFileLoader } = require('@graphql-tools/graphql-file-loader');
+import { GraphQLFileLoader } from '@graphql-tools/graphql-file-loader';
 import resolvers from './resolvers';
+// import { db } from './database';
+
+// db();
 
 const schema = loadSchemaSync('./schema.graphql', {
   loaders: [new GraphQLFileLoader()],

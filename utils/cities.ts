@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const citySearch = async (search: string) => {
+export const getCities = async (search: string): Promise<Object[]> => {
   const url = `http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=5&appid=ce1facfcbc13ddc8f017c1d19fef24f6`;
 
   try {
