@@ -1,28 +1,20 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import _ from 'lodash';
+import { devTokenKey } from '../constant';
 import { Users } from '../database';
 
-const tokenKey = process.env.TOKEN_KEY || 'auth-token-key';
+const tokenKey = process.env.TOKEN_KEY || devTokenKey;
 
 export const register = async ({ name, password }: { name: string; password: string }) => {
   if (!(name && password)) {
-    throw Error('All input is required');
-  }
-
-  // at least one number, one lowercase and one uppercase letter
-  // at least six characters
-  const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
-  if (!regex.test(password)) {
-    throw Error(
-      'Password must be at least six characters and contain at least one number, one lowercase and one uppercase letter',
-    );
+    throw new Error('All input is required');
   }
 
   // check if user already exists
   const existingUser = await Users.findOne({ name });
   if (existingUser) {
-    throw Error('User already exists');
+    throw new Error('User already exists');
   }
 
   // encrypt user password

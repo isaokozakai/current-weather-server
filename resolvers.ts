@@ -10,25 +10,31 @@ export default {
 
         return user;
       } catch (error: any) {
-        throw new Error(error);
+        throw error;
       }
     },
-    cities: async (root: any, { search }: { search: string }) => {
+    cities: async (root: any, { search }: { search: string }, { user }: { user: string }) => {
+      if (!user) {
+        throw new Error('You are not authenticated!');
+      }
       try {
         const cities = getCities(search);
 
         return cities;
       } catch (error: any) {
-        throw new Error(error);
+        throw error;
       }
     },
-    weather: async (root: any, input: { lat: number; lon: number }) => {
+    weather: async (root: any, input: { lat: number; lon: number }, { user }: { user: string }) => {
+      if (!user) {
+        throw new Error('You are not authenticated!');
+      }
       try {
         const weather = getWeather(input);
 
         return weather;
       } catch (error: any) {
-        throw new Error(error);
+        throw error;
       }
     },
   },
@@ -39,7 +45,7 @@ export default {
 
         return user;
       } catch (error: any) {
-        throw new Error(error);
+        throw error;
       }
     },
   },
