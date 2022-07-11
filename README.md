@@ -11,7 +11,7 @@ This is a server project for a current weather search application
 ### `cities`
 - You can get details of cities including coordinates to query `weather`
 ### `weather`
-- You can get a current wearher in coordinates
+- You can get current wearher in coordinates
 
 ## Test Environment Setup
 1. Install Insomnia and MongoDB on your machine
