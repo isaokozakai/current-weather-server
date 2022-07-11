@@ -21,10 +21,14 @@ const server = new ApolloServer({
     if (token) {
       // try to retrieve a user with the token
       const tokenKey = process.env.TOKEN_KEY || devTokenKey;
-      const user = jwt.verify(token, tokenKey);
+      try {
+        const user = jwt.verify(token, tokenKey);
 
-      // add the user to the context
-      return { user };
+        // add the user to the context
+        return { user };
+      } catch (error) {
+        return {};
+      }
     }
 
     return {};
