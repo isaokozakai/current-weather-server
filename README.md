@@ -14,7 +14,7 @@ This is a server for a current weather search application
 - You can get a current wearher in coordinates
 
 ## Test Environment Setup
-1. Install Insomnia, and MongoDB on your machine
+1. Install Insomnia and MongoDB on your machine
 2. Run `yarn install`
 3. Run MongoDB
 4. Run `yarn start`
