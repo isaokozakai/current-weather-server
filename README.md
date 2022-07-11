@@ -4,7 +4,7 @@ This is a server project for a current weather search application
 ## Features
 ### Mutation
 ### `register`
-- You can sign up with name and password *name must be unique
+- You can sign up with name and password (*name must be unique)
 ### Query
 ### `login`
 - You can log in with name and password
