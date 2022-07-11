@@ -1,5 +1,5 @@
 # Imdex Coding Challenge Server
-This is a server for a current weather search application
+This is a server project for a current weather search application
 
 ## Features
 ### Mutation
