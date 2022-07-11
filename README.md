@@ -19,4 +19,4 @@ This is a server project for a current weather search application
 3. Run MongoDB
 4. Run `yarn start`
 5. Query `register` or `login` to get token on Insomnia
-6. For querying `cities` and `weather`, put the token in Bearer Token in Auth tab
+6. For querying `cities` and `weather`, put the token in Bearer Token in Auth tab on Insomnia
