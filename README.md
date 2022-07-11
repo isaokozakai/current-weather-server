@@ -2,9 +2,15 @@
 This is a server for a current weather search application
 
 ## Features
+### Mutation
+### `register`
 - You can sign up with name and password *name must be unique
+### Query
+### `login`
 - You can log in with name and password
-- You can get details of cities
+### `cities`
+- You can get details of cities including coordinates to query `weather`
+### `weather`
 - You can get a current wearher in coordinates
 
 ## Test Environment Setup
