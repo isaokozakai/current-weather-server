@@ -1,4 +1,4 @@
-# Imdex Coding Challenge Server
+# Current Weather App Server
 This is a server project for a current weather search application
 
 ## Features
